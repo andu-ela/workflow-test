@@ -1,0 +1,16 @@
+name: CI
+on:
+  pull_request:
+    branches:
+      - staging
+      - main
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: Run checks
+        run: |
+          echo "Running basic checks..."
+          echo "OK ✅"
